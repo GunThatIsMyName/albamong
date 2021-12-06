@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useAppContext } from "../context/AppContext";
 import { AlbaLogo } from "../utils/icons";
@@ -10,7 +11,9 @@ function Header() {
 
   return (
     <Wrapper>
+      <Link to="/">
       <img className="header__logo" src={AlbaLogo} alt="alba-logo" />
+      </Link>
       {isLoggedIn && (
         <ul className="header__center">
           <li>hello</li>

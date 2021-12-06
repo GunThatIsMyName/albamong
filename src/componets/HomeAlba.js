@@ -11,11 +11,11 @@ function HomeAlba() {
     <Wrapper>
       <div className="alba__regi">
         <MdEmojiPeople className="alba__icon alba-color" />
-        <Link className="alba__link" to="/create">구직 등록</Link>
+        <Link state="employee" className="alba__link" to="/create">구직 등록</Link>
       </div>
       <div className="alba__regi">
         <IoIosPeople className="alba__icon  comp-color" />
-        <Link to="/create" className="alba__link">구인 등록</Link>
+        <Link state="employer" to="/create" className="alba__link">구인 등록</Link>
       </div>
     </Wrapper>
   );

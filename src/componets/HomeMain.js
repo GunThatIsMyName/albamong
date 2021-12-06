@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { list } from "../utils/helps";
 import MainCategory from "./MainCategory";
 import MainJob from "./MainJob";
 
 function HomeMain() {
   return (
     <Wrapper>
-      <MainJob />
+      {list.map(item=>{
+        return <MainJob key={item.id} {...item} />
+      })}
     </Wrapper>
   );
 }

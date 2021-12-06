@@ -2,30 +2,30 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-function MainJob() {
+function MainJob({id,company,job,info,image,salary,workAt,author}) {
   return (
     <Wrapper className="arti">
       <h3>구인 공고</h3>
-      <Link to="/" className="job__detail">
+      <Link to={`/job/${id}`} className="job__detail">
         <div className="job__info">
           <div className="job__comp">
             <h3>회사명 : </h3>
-            <p>Apple </p>
+            <p>{company} </p>
           </div>
           <div className="job__comp">
             <h3>업무 내용 :</h3>
-            <p>Front - End Developer</p>
+            <p>{job}</p>
           </div>
         </div>
         <img
           className="job__img"
-          src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
-          alt=""
+          src={image}
+          alt={job}
         />
       </Link>
       <div className="article__footer">
-        <p>근무지 : 서울 가산디지털</p>
-        <h3 className="arti__aurhtour">작성자 : 이 준현</h3>
+        <p>근무지 : {workAt}</p>
+        <h3 className="arti__aurhtour">작성자 : {author}</h3>
       </div>
     </Wrapper>
   );

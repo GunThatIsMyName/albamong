@@ -6,6 +6,7 @@ import Loader from "./componets/Loader";
 import Login from "./page/Login";
 import { useAppContext } from "./context/AppContext";
 import Create from "./page/Create";
+import Job from "./page/Job";
 
 function App() {
   const {loginLoading,user}=useAppContext();
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={isLoggedIn ? <Home /> : <Login />} />
         <Route path="/create" element={<Create /> }/>
+        <Route path="/job/:id" element={<Job /> }/>
       </Routes>
     </BrowserRouter>
   );
