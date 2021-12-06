@@ -5,6 +5,7 @@ import Home from "./page/Home";
 import Loader from "./componets/Loader";
 import Login from "./page/Login";
 import { useAppContext } from "./context/AppContext";
+import Create from "./page/Create";
 
 function App() {
   const {loginLoading,user}=useAppContext();
@@ -18,6 +19,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={isLoggedIn ? <Home /> : <Login />} />
+        <Route path="/create" element={<Create /> }/>
       </Routes>
     </BrowserRouter>
   );
