@@ -29,6 +29,9 @@ const AppProvider=({children})=>{
         })
     }
 
+    const handleUser = ()=>{
+        console.log("@@@s")
+    }
     const handleLogout=async()=>{
         try{
             await firebaseAuth.signOut();
@@ -46,7 +49,7 @@ const AppProvider=({children})=>{
 
     console.log(state,"all state")
     return (
-        <AppContext.Provider value={{...state,handleLogin,handleLogout}}>
+        <AppContext.Provider value={{...state,handleLogin,handleLogout,handleUser}}>
             {children}
         </AppContext.Provider>
     )

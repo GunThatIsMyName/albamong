@@ -11,23 +11,19 @@ function Header() {
   return (
     <Wrapper>
       <img className="header__logo" src={AlbaLogo} alt="alba-logo" />
-      {
-        isLoggedIn && 
-      <ul className="header__center">
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
-      </ul>
-      }
+      {isLoggedIn && (
+        <ul className="header__center">
+          <li>hello</li>
+          <li>hello</li>
+          <li>hello</li>
+          <li>hello</li>
+          <li>hello</li>
+          <li>hello</li>
+        </ul>
+      )}
       <div className="header__btn">
         {isLoggedIn ? (
-          <>
-            <img src={user.image} alt={user.name} />
-            <button onClick={handleLogout}>Logout</button>
-          </>
+          <button onClick={handleLogout}>Logout</button>
         ) : (
           <button onClick={handleLogin}>Login</button>
         )}
@@ -64,7 +60,7 @@ const Wrapper = styled.header`
     }
     button {
       font-size: 1.3rem;
-      border: 2px solid #F0850C;
+      border: 2px solid #f0850c;
       outline: none;
       background: transparent;
       padding: 8px 16px;
@@ -72,7 +68,7 @@ const Wrapper = styled.header`
       cursor: pointer;
       transition: background 0.3s linear;
       &:hover {
-        background: #F0850C;
+        background: #f0850c;
         color: #fff;
       }
     }
@@ -80,15 +76,15 @@ const Wrapper = styled.header`
   @media screen and (max-width: 991px) {
     .header__center {
       position: fixed;
-      bottom:0;
-      display:flex;
-      color:#fff;
-      justify-content:space-around;
-      gap:0;
-      left:0;
-      width:100%;
-      height:2rem;
-      background:#F0850C;
+      bottom: 0;
+      display: flex;
+      color: #fff;
+      justify-content: space-around;
+      gap: 0;
+      left: 0;
+      width: 100%;
+      height: 2rem;
+      background: #f0850c;
     }
     .header__logo {
       height: 1.6rem;
